@@ -11,27 +11,81 @@
 
 <body>
     <div class="bg-neutral-100">
-        <p class="hidden px-3 py-1 text-yellow-800 font-bold">Buy & Sell Exotics</p>
-        <nav class="top-0 sticky bg-inherit">
+        <p class="hidden lg:block px-3 py-1 text-yellow-800 font-bold"><i>Buy Exotics</i></p>
+        <nav class="top-0 sticky bg-inherit z-50">
             <div class="w-full h-auto py-4 px-4 border shadow-md space-y-2">
                 <div class="flex justify-between">
                     <div class="flex gap-[15px]">
                         <div class="-mt-1 text-[20px]"><i class="fa-solid fa-bars"></i></div>
-                        <p class="-mt-1 text-yellow-800 text-[20px] font-bold font-serif">SUPER <span class="text-[18px] text-yellow-800 border-[5px] rounded-full  border-yellow-800"><i class="fa-solid fa-star"></i></span> EXOTICS</p>
+                        <p class="-mt-1 text-yellow-800 text-[20px] font-bold font-serif">SUPER <span
+                                class="text-[18px] text-yellow-800 border-[5px] rounded-full border-yellow-800"><i
+                                    class="fa-solid fa-star"></i></span> EXOTICS</p>
                     </div>
 
-                    <div class="flex gap-[20px] text-[20px] -mt-1">
+                    <!-- search bar for lg -->
+                    <div class="hidden lg:flex gap-2">
+                        <div class="flex gap-2 border-[1px] border-neutral-400 rounded-[5px] px-2">
+                            <span class="text-neutral-400 mt-[3px] text-[18px] pl-2"><i
+                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <input type="text" class="bg-inherit w-[500px] py-1 border-none outline-none text-[17px]"
+                                placeholder="Search products, brands and categories">
+                        </div>
+                        <button
+                            class="bg-yellow-800 text-white px-5 font-bold rounded-[4px] shadow-2xl hover:bg-yellow-600">SEARCH</button>
+                    </div>
+
+                    <!-- Account & Cart for sm & md -->
+                    <div class="lg:hidden flex gap-[20px] text-[20px] -mt-1">
                         <div>
                             <i class="fa-solid fa-user"></i>
                         </div>
                         <div class="relative pr-4">
                             <i class="fa-solid fa-cart-shopping"></i>
-                            <span class="left-4 -top-1 absolute bg-yellow-800 px-[5px] rounded-full text-white text-[12px]">4</span>
+                            <span
+                                class="left-4 -top-1 absolute bg-yellow-800 px-[5px] rounded-full text-white text-[12px]">4</span>
+                        </div>
+                    </div>
+
+                    <!-- Account & Cart for lg -->
+                    <div class="hidden lg:flex gap-[20px] text-[20px] -mt-1">
+                        <div class="relative">
+                            <div tabindex="0" class=" hover:text-yellow-800 focus:outline-none">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Account</span> <span class="text-[15px]"><i
+                                        class="fa-solid fa-chevron-down"></i></span>
+                            </div>
+
+                            <div
+                                class="hidden absolute focus-within:block mt-10 border-[1px] p-4 bg-white w-[180px] shadow-xl">
+                                <button
+                                    class="w-full bg-yellow-800 text-white text-center px-5 py-1 text-[17px] font-bold rounded-[4px] shadow-2xl hover:bg-yellow-600">SIGN
+                                    IN</button>
+
+                                <ul class="text-[16px] space-y-2 mt-5 pt-2 border-t-[2px] border-t-neutral-300">
+                                    <li class="hover:font-medium"><a href="#myaccount" class="flex gap-4"><span><i
+                                                    class="fa-solid fa-user"></i></span> <span>My Account</span></a>
+                                    </li>
+
+                                    <li class="hover:font-medium"><a href="#orders" class="flex gap-4"><span><i
+                                                    class="fa-solid fa-suitcase"></i></span> <span>Orders</span></a>
+                                    </li>
+
+                                    <li class="hover:font-medium"><a href="#saveditems" class="flex gap-4"><span><i
+                                                    class="fa-regular fa-heart"></i></span> <span>Saved Items</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="relative pr-4">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span
+                                class="left-4 -top-1 absolute bg-yellow-800 px-[5px] rounded-full text-white text-[12px]">4</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex w-full border-[1px] border-black rounded-full">
+                <!-- search bar for sm & md -->
+                <div class="lg:hidden flex w-full border-[1px] border-black rounded-full">
                     <span class="text-yellow-800 text-[17px] pl-2"><i class="fa-solid fa-magnifying-glass"></i></span>
                     <input type="text" class="w-5/6 text-[15px] bg-inherit outline-none px-2 py-1"
                         placeholder="Search products, brands and categories">
@@ -41,14 +95,24 @@
         </nav>
 
         <main>
-            <div>
-                <div class="flex justify-center px-2 py-5">
-                    <div id="card" class="flex justify-center flex-wrap gap-[20px] lg:w-[1500px]">
-                    
-                    </div>
+            <div class="flex justify-center px-2 py-5">
+                <div id="card" class="flex justify-center flex-wrap gap-[20px] lg:w-[1500px]">
+
                 </div>
             </div>
         </main>
+
+        <footer>
+            <div class="bg-neutral-700">
+                <div>
+                    <p class="-mt-1 text-yellow-800 text-[20px] font-bold font-serif">SUPER <span
+                            class="text-[18px] text-yellow-800 border-[5px] rounded-full border-yellow-800"><i
+                                class="fa-solid fa-star"></i></span> EXOTICS</p>
+                </div>
+
+                <br><br><br><br><br>
+            </div>
+        </footer>
     </div>
 
     <script src="script.js"></script>

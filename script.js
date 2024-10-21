@@ -367,9 +367,9 @@ function fetchProduct() {
   try {
     for (let i = 0; i < data.length; i++) {
       text += `
-      <div class= "w-[350px] space-y-2 bg-white px-[10px] py-[10px] border rounded-[5px]">
+      <div class="hover:shadow-xl lg:hover:scale-105 min-w-0 max-w-[350px] space-y-2 bg-white px-[10px] py-[10px] border rounded-[5px]">
         <div>
-          <img src="${data[i].image}" class="w-[300px] h-[200px]" alt="${data[i].name}"/>
+          <img src="${data[i].image}" class="w-full h-[200px] rounded-[5px]" alt="${data[i].name}"/>
         </div>
         <p class="font-bold text-[18px]">${data[i].name}</p>
         <p><span class="font-bold">Brand:</span> <span class="font-bold text-yellow-700">${data[i].brand}</span></p>
